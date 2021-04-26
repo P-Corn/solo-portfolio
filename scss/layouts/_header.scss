@@ -1,0 +1,21 @@
+// @import 'abstracts/variables';
+
+.header {
+    height: 100vh;
+    background-color: $dark;
+    @include flex-center;
+    flex-direction: column;
+
+    .header__text {
+        color: white;
+        
+        h1 {
+            font-weight: 300;
+            font-size: 5rem;
+        }
+
+        span {
+            color: $pink;
+        }
+    }
+}
