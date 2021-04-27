@@ -1,0 +1,34 @@
+.skills {
+
+    &__row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__col {
+        padding: 3rem;
+        margin: 1rem;
+        background-color: $dark;
+        border-radius: 100rem;
+
+        img {
+            height: 7rem;
+            width: 7rem;
+        }
+    }
+}
+
+.create {
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    p {
+        color: $pink;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+}

@@ -362,14 +362,22 @@ a {
 
 .skills__row {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap; }
 
 .skills__col {
-  padding: .4rem;
+  padding: 3rem;
   margin: 1rem;
   background-color: #252934;
   border-radius: 100rem; }
   .skills__col img {
-    height: 13rem;
-    width: 13rem; }
+    height: 7rem;
+    width: 7rem; }
+
+.create h2 {
+  margin-bottom: 0; }
+
+.create p {
+  color: #e31b6d;
+  text-align: center;
+  font-size: 2rem; }
