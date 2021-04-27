@@ -1,0 +1,25 @@
+.skills {
+
+    &__container {
+    //    @include flex-center;
+        // min-height: 90rem;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__col {
+        padding: .4rem;
+        margin: 1rem;
+        background-color: $dark;
+        border-radius: 100rem;
+
+        img {
+            height: 13rem;
+            width: 13rem;
+        }
+    }
+}

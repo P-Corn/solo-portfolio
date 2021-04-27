@@ -304,6 +304,19 @@ template {
 [hidden] {
   display: none; }
 
+.btn {
+  padding: 1rem 2.3rem;
+  border: .2rem solid white;
+  font-size: 2rem;
+  border-radius: 3.5rem;
+  color: white;
+  font-weight: 300;
+  transition: all 0.5s; }
+
+.btn:hover {
+  background-color: #04c2c9;
+  border: 0.2rem solid #04c2c9; }
+
 html {
   font-size: 62.5%; }
 
@@ -311,6 +324,21 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-size: 1.6rem; }
+
+.container {
+  max-width: 100rem; }
+
+.section {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.section__title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #444649; }
 
 a {
   text-decoration: none;
@@ -322,7 +350,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  text-align: center; }
   .header .header__text {
     color: white; }
     .header .header__text h1 {
@@ -330,3 +359,17 @@ a {
       font-size: 5rem; }
     .header .header__text span {
       color: #e31b6d; }
+
+.skills__row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.skills__col {
+  padding: .4rem;
+  margin: 1rem;
+  background-color: #252934;
+  border-radius: 100rem; }
+  .skills__col img {
+    height: 13rem;
+    width: 13rem; }

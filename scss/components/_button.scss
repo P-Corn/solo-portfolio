@@ -1,3 +1,14 @@
 .btn {
-    padding: 1rem 2rem;
+    padding: 1rem 2.3rem;
+    border: .2rem solid white;
+    font-size: 2rem;
+    border-radius: 3.5rem;
+    color: white;
+    font-weight: 300;
+    transition: all 0.5s;
+}
+
+.btn:hover {
+    background-color: $blue;
+    border: .2rem solid $blue;
 }

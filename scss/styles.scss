@@ -1,6 +1,8 @@
 @import 'base/normalize';
-@import 'base/typography';
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
+@import 'abstracts/media-queries';
 @import 'components/button';
+@import 'base/main';
 @import 'layouts/header';
+@import 'layouts/skills'; 
