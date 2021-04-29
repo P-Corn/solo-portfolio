@@ -328,7 +328,8 @@ p {
 .section__hr {
   border: 2px solid #444649;
   width: 8rem;
-  margin: 1.5rem auto 6rem; }
+  margin: 1.5rem auto 6rem;
+  background-color: #444649; }
 
 .section__title {
   text-align: center;
