@@ -98,14 +98,20 @@
 
 #work-section {
     background-color: $sectionbg;
-    padding-bottom: 3rem;
+    @include lt-sm {
+        padding-bottom: 3rem;
+    }
 }
 
 .work {
-
+    width: 100%;
     &__row {
         @include flex-center;
+        display: flex;
         flex-wrap: wrap;
+        @include gt-sm {
+            justify-content: space-between;
+        }
     }
 }
 
@@ -116,10 +122,13 @@
     overflow: hidden;
     position: relative;
     border-radius: .4rem;
-    flex: 51%;
+    max-width: 46rem;
+    @include gt-sm {
+        margin-bottom: 0;
+    }
 
     &__img {
-        max-height: 20rem;
+        max-height: 25rem;
         // max-width: 20rem;
         img {
             max-width: 100%;

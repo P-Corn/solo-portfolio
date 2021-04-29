@@ -5,6 +5,9 @@
     color: white;
     font-weight: 300;
     transition: all 0.5s;
+    @include gt-xs {
+        font-size: 2rem;
+    }
 }
 
 .btn--blue {
