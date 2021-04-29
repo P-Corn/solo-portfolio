@@ -358,6 +358,9 @@ a {
     .header .header__text h1 {
       font-weight: 300;
       font-size: 3.5rem; }
+      @media screen and (min-width: 600px) {
+        .header .header__text h1 {
+          font-size: 5rem; } }
     .header .header__text span {
       color: #e31b6d; }
   .header .header__btn {
@@ -455,7 +458,7 @@ a {
   overflow: hidden;
   position: relative;
   border-radius: .4rem;
-  max-width: 46rem; }
+  max-width: 45rem; }
   @media screen and (min-width: 960px) {
     .project-card {
       margin-bottom: 0; } }
@@ -497,26 +500,34 @@ a {
     color: #f5f5f5; }
   .contact hr {
     border: 2px solid #f5f5f5; }
-  .contact form {
-    min-width: 95%; }
-    .contact form input,
-    .contact form textarea {
-      width: 100%;
-      box-sizing: border-box;
-      border: 0;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      background-color: #1e242c;
-      caret-color: white;
-      color: #f5f5f5; }
-      .contact form input:focus,
-      .contact form textarea:focus {
-        outline: none; }
-    .contact form textarea {
-      min-height: 15rem; }
-    .contact form .btn-container {
-      text-align: right;
-      padding: 1rem 0; }
+  .contact__form {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  @media screen and (max-width: 599px) {
+    .contact form {
+      min-width: 100%; } }
+  @media screen and (min-width: 600px) {
+    .contact form {
+      width: 54rem; } }
+  .contact form input,
+  .contact form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #1e242c;
+    caret-color: white;
+    color: #f5f5f5; }
+    .contact form input:focus,
+    .contact form textarea:focus {
+      outline: none; }
+  .contact form textarea {
+    min-height: 15rem; }
+  .contact form .btn-container {
+    text-align: right;
+    padding: 1rem 0; }
 
 .btn, .btn--blue, .btn--pink {
   padding: 1rem 2.4rem;
