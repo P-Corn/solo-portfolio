@@ -3,6 +3,11 @@
 }
 
 .skills {
+    max-width: 60rem;
+
+    .section__hr {
+        margin-bottom: 5rem;
+    }
 
     &__row {
         display: flex;
@@ -15,6 +20,9 @@
         margin: 1rem;
         background-color: $dark;
         border-radius: 100rem;
+        @include gt-sm {
+            margin: 1.7rem
+        }
 
         img {
             height: 6rem;
@@ -24,20 +32,13 @@
 }
 
 #create-section {
-    padding-bottom: 3rem;
+    @include lt-sm {
+        padding-bottom: 4rem;
+    }
 }
 
 .create {
     // height: 100vh;
-
-    &__subtitle {
-        color: $sectiontitle;
-        text-align: center;
-        font-size: 2rem;
-        margin: 0;
-        padding-bottom: 2rem;
-    }
-
     &__row {
         display: flex;
         justify-content: center;
@@ -54,6 +55,10 @@
     // margin-bottom: 3rem;
     height: 19rem;
     padding: 0 1rem;
+    @include gt-sm {
+        flex: 20%;
+        height: auto;
+    }
 
     &__icon {
         width: 5rem;
@@ -68,13 +73,20 @@
     }
 
     &__title {
-        margin: 1rem 0 .5rem 0;
+        margin: 2rem 0 1rem 0;
         color: $body;
+        @include gt-xs {
+            font-size: 2.4rem;
+            margin: 1.5rem 0 .5rem 0;
+        }
     }
 
     &__subtitle {
         font-size: 1.5rem;
         color: $body;
+        @include gt-xs {
+            font-size: 1.6rem;
+        }
 
         p {
             margin: 0;
@@ -115,6 +127,10 @@
             // height: auto;
             opacity: 0.15;
         }
+    }
+
+    .btn-container {
+        padding: 1rem 0;
     }
 
     &__content {
@@ -174,11 +190,11 @@
 
         textarea {
             min-height: 15rem;
-            margin-bottom: 2rem;
         }
 
         .btn-container {
             text-align: right;
+            padding: 1rem 0;
         }
     }
 }

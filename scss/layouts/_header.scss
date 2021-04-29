@@ -12,11 +12,15 @@
         
         h1 {
             font-weight: 300;
-            font-size: 4rem;
+            font-size: 3.5rem;
         }
 
         span {
             color: $pink;
         }
+    }
+
+    .header__btn {
+        padding: 1rem 0;
     }
 }
