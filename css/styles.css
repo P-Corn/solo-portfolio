@@ -332,11 +332,13 @@ p {
 
 .section__title {
   text-align: center;
-  font-size: 2.5rem;
-  font-weight: 300;
-  color: #444649; }
-  .section__title h2 {
-    margin: 0; }
+  font-size: 3.7rem;
+  font-weight: 500;
+  color: #444649;
+  margin: 0; }
+  @media screen and (min-width: 600px) {
+    .section__title {
+      font-size: 4.2rem; } }
 
 a {
   text-decoration: none;
@@ -414,40 +416,39 @@ a {
       height: 100%; }
   .card__title {
     margin: 2rem 0 1rem 0;
-    color: #616161; }
+    color: #616161;
+    font-size: 2rem; }
     @media screen and (min-width: 600px) {
       .card__title {
         font-size: 2.4rem;
         margin: 1.5rem 0 .5rem 0; } }
   .card__subtitle {
-    font-size: 1.5rem;
-    color: #616161; }
+    font-size: 1.4rem;
+    color: #616161;
+    margin: 0;
+    font-weight: 300; }
     @media screen and (min-width: 600px) {
       .card__subtitle {
         font-size: 1.6rem; } }
-    .card__subtitle p {
-      margin: 0;
-      font-weight: 300; }
 
-#work-section {
+#projects-section {
   background-color: #f5f5f5; }
   @media screen and (max-width: 599px) {
-    #work-section {
+    #projects-section {
       padding-bottom: 3rem; } }
 
-.work {
+.project {
   width: 100%; }
-  .work__row {
+  .project__row {
     display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
     flex-wrap: wrap; }
     @media screen and (min-width: 960px) {
-      .work__row {
+      .project__row {
         justify-content: space-between; } }
 
-.website-card {
+.project-card {
   margin-bottom: 3rem;
   background: #252934;
   overflow: hidden;
@@ -455,16 +456,16 @@ a {
   border-radius: .4rem;
   max-width: 46rem; }
   @media screen and (min-width: 960px) {
-    .website-card {
+    .project-card {
       margin-bottom: 0; } }
-  .website-card__img {
+  .project-card__img {
     max-height: 25rem; }
-    .website-card__img img {
+    .project-card__img img {
       max-width: 100%;
       opacity: 0.15; }
-  .website-card .btn-container {
+  .project-card .btn-container {
     padding: 1rem 0; }
-  .website-card__content {
+  .project-card__content {
     color: #f5f5f5;
     position: absolute;
     top: 50%;
@@ -472,11 +473,18 @@ a {
     text-align: center;
     transform: translate(-50%, -50%);
     width: 100%; }
-    .website-card__content h3 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem; }
-    .website-card__content p {
-      margin-bottom: 4rem; }
+  .project-card__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem; }
+    @media screen and (min-width: 600px) {
+      .project-card__title {
+        font-size: 3rem; } }
+  .project-card__subtitle {
+    margin-bottom: 6rem;
+    font-size: 1.4rem; }
+    @media screen and (min-width: 600px) {
+      .project-card__subtitle {
+        font-size: 1.6rem; } }
 
 #contact-section {
   background-color: #252934; }
@@ -510,14 +518,11 @@ a {
 
 .btn, .btn--blue, .btn--pink {
   padding: 1rem 2.5rem;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   border-radius: .5rem;
   color: white;
   font-weight: 300;
   transition: all 0.5s; }
-  @media screen and (min-width: 600px) {
-    .btn, .btn--blue, .btn--pink {
-      font-size: 2rem; } }
 
 .btn--blue {
   border: .2rem solid white; }
