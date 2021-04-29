@@ -304,19 +304,6 @@ template {
 [hidden] {
   display: none; }
 
-.btn {
-  padding: 1rem 2.3rem;
-  border: .2rem solid white;
-  font-size: 2rem;
-  border-radius: 3.5rem;
-  color: white;
-  font-weight: 300;
-  transition: all 0.5s; }
-
-.btn:hover {
-  background-color: #04c2c9;
-  border: 0.2rem solid #04c2c9; }
-
 html {
   font-size: 62.5%; }
 
@@ -325,20 +312,34 @@ body {
   font-size: 16px;
   font-size: 1.6rem; }
 
+h3,
+p {
+  margin: 0; }
+
+h3 {
+  font-size: 1.85rem; }
+
 .container {
   max-width: 100rem; }
 
 .section {
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center; }
 
+.section__hr {
+  border: 2px solid #444649;
+  width: 8rem;
+  margin: 1.5rem auto 4rem; }
+
 .section__title {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 300;
   color: #444649; }
+  .section__title h2 {
+    margin: 0; }
 
 a {
   text-decoration: none;
@@ -360,24 +361,150 @@ a {
     .header .header__text span {
       color: #e31b6d; }
 
+#skills-section {
+  background-color: #f5f5f5; }
+
 .skills__row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap; }
 
 .skills__col {
-  padding: 3rem;
+  padding: 2.5rem;
   margin: 1rem;
   background-color: #252934;
   border-radius: 100rem; }
   .skills__col img {
-    height: 7rem;
-    width: 7rem; }
+    height: 6rem;
+    width: 6rem; }
 
-.create h2 {
-  margin-bottom: 0; }
+#create-section {
+  padding-bottom: 3rem; }
 
-.create p {
-  color: #e31b6d;
+.create__subtitle {
+  color: #444649;
   text-align: center;
-  font-size: 2rem; }
+  font-size: 2rem;
+  margin: 0;
+  padding-bottom: 2rem; }
+
+.create__row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.card {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex: 40%;
+  height: 19rem;
+  padding: 0 1rem; }
+  .card__icon {
+    width: 5rem;
+    height: 5rem;
+    background-color: #04c2c9;
+    border-radius: 50rem;
+    padding: 1.5rem; }
+    .card__icon img {
+      height: 100%; }
+  .card__title {
+    margin: 1rem 0 .5rem 0;
+    color: #616161; }
+  .card__subtitle {
+    font-size: 1.5rem;
+    color: #616161; }
+    .card__subtitle p {
+      margin: 0;
+      font-weight: 300; }
+
+#work-section {
+  background-color: #f5f5f5;
+  padding-bottom: 3rem; }
+
+.work__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.website-card {
+  margin-bottom: 3rem;
+  background: #252934;
+  overflow: hidden;
+  position: relative;
+  border-radius: .4rem;
+  flex: 51%; }
+  .website-card__img {
+    max-height: 20rem; }
+    .website-card__img img {
+      max-width: 100%;
+      opacity: 0.15; }
+  .website-card__content {
+    color: #f5f5f5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width: 100%; }
+    .website-card__content h3 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem; }
+    .website-card__content p {
+      margin-bottom: 4rem; }
+
+#contact-section {
+  background-color: #252934; }
+
+.contact {
+  width: 100%; }
+  .contact .section__title {
+    color: #f5f5f5; }
+  .contact hr {
+    border: 2px solid #f5f5f5; }
+  .contact form {
+    min-width: 95%; }
+    .contact form input,
+    .contact form textarea {
+      width: 100%;
+      box-sizing: border-box;
+      border: 0;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background-color: #1e242c;
+      caret-color: white;
+      color: #f5f5f5; }
+      .contact form input:focus,
+      .contact form textarea:focus {
+        outline: none; }
+    .contact form textarea {
+      min-height: 15rem;
+      margin-bottom: 2rem; }
+    .contact form .btn-container {
+      text-align: right; }
+
+.btn {
+  padding: 1rem 2.7rem;
+  border: .2rem solid white;
+  font-size: 2rem;
+  border-radius: 3.5rem;
+  color: white;
+  font-weight: 300;
+  transition: all 0.5s; }
+
+.btn:hover {
+  background-color: #04c2c9;
+  border: 0.2rem solid #04c2c9; }
+
+.btn--squared {
+  padding: 1rem 2.3rem;
+  border: 0.2rem solid #e31b6d;
+  font-weight: 300;
+  font-size: 2rem;
+  border-radius: 2.5rem;
+  transition: all 0.5s; }
+
+.btn--squared:hover {
+  background-color: #e31b6d; }

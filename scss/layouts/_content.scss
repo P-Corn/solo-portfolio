@@ -1,3 +1,7 @@
+#skills-section {
+    background-color: $sectionbg;
+}
+
 .skills {
 
     &__row {
@@ -7,28 +11,174 @@
     }
 
     &__col {
-        padding: 3rem;
+        padding: 2.5rem;
         margin: 1rem;
         background-color: $dark;
         border-radius: 100rem;
 
         img {
-            height: 7rem;
-            width: 7rem;
+            height: 6rem;
+            width: 6rem;
         }
     }
 }
 
+#create-section {
+    padding-bottom: 3rem;
+}
+
 .create {
+    // height: 100vh;
 
-    h2 {
-        margin-bottom: 0;
-    }
-
-    p {
-        color: $pink;
+    &__subtitle {
+        color: $sectiontitle;
         text-align: center;
         font-size: 2rem;
+        margin: 0;
+        padding-bottom: 2rem;
     }
 
+    &__row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+.card {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 40%;
+    // margin-bottom: 3rem;
+    height: 19rem;
+    padding: 0 1rem;
+
+    &__icon {
+        width: 5rem;
+        height: 5rem;
+        background-color: $blue;
+        border-radius: 50rem;
+        padding: 1.5rem;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &__title {
+        margin: 1rem 0 .5rem 0;
+        color: $body;
+    }
+
+    &__subtitle {
+        font-size: 1.5rem;
+        color: $body;
+
+        p {
+            margin: 0;
+            font-weight: 300;
+        }
+    }
+
+}
+
+#work-section {
+    background-color: $sectionbg;
+    padding-bottom: 3rem;
+}
+
+.work {
+
+    &__row {
+        @include flex-center;
+        flex-wrap: wrap;
+    }
+}
+
+.website-card {
+    // background-color: white;
+    margin-bottom: 3rem;
+    background: #252934;
+    overflow: hidden;
+    position: relative;
+    border-radius: .4rem;
+    flex: 51%;
+
+    &__img {
+        max-height: 20rem;
+        // max-width: 20rem;
+        img {
+            max-width: 100%;
+            // object-fit: fill;
+            // height: auto;
+            opacity: 0.15;
+        }
+    }
+
+    &__content {
+        // padding: 0 1rem;
+        color: $sectionbg;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        width: 100%;
+
+        h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 4rem;
+        }
+    }
+
+    
+}
+
+#contact-section {
+    background-color: $dark;
+}
+
+.contact {
+    width: 100%;
+    .section__title {
+        color: $sectionbg;
+    }
+    hr {
+        // background-color: $sectionbg;
+        border: 2px solid $sectionbg;
+    }
+
+    form {
+        min-width: 95%;
+        input,
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            border: 0;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-color: $inputbg;
+            caret-color: white;
+            color: $sectionbg;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        textarea {
+            min-height: 15rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn-container {
+            text-align: right;
+        }
+    }
 }

@@ -14,6 +14,15 @@ body {
     font-size: 1.6rem;
 }
 
+h3,
+p {
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.85rem;
+}
+
 // main {
 //     text-align: center;
 // }
@@ -23,15 +32,26 @@ body {
 }
 
 .section {
-    padding: 4rem 2rem;
+    padding: 6rem 2rem;
     @include flex-center;
+}
+
+.section__hr {
+    // background-color: $pink;
+    border: 2px solid $sectiontitle;
+    width: 8rem;
+    margin: 1.5rem auto 4rem;
 }
 
 .section__title {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 300;
     color: $sectiontitle;
+    
+    h2 {
+        margin: 0;
+    }
 }
 
 a {
