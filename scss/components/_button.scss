@@ -1,10 +1,13 @@
 .btn {
-    padding: 1rem 2.5rem;
-    font-size: 1.7rem;
+    padding: 1rem 2.4rem;
+    font-size: 1.6rem;
     border-radius: .5rem;
     color: white;
     font-weight: 300;
     transition: all 0.5s;
+    @include gt-xs {
+        font-size: 1.8rem;
+    }
 }
 
 .btn--blue {

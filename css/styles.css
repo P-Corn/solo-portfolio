@@ -481,7 +481,8 @@ a {
         font-size: 3rem; } }
   .project-card__subtitle {
     margin-bottom: 6rem;
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    font-weight: 300; }
     @media screen and (min-width: 600px) {
       .project-card__subtitle {
         font-size: 1.6rem; } }
@@ -517,12 +518,15 @@ a {
       padding: 1rem 0; }
 
 .btn, .btn--blue, .btn--pink {
-  padding: 1rem 2.5rem;
-  font-size: 1.7rem;
+  padding: 1rem 2.4rem;
+  font-size: 1.6rem;
   border-radius: .5rem;
   color: white;
   font-weight: 300;
   transition: all 0.5s; }
+  @media screen and (min-width: 600px) {
+    .btn, .btn--blue, .btn--pink {
+      font-size: 1.8rem; } }
 
 .btn--blue {
   border: .2rem solid white; }

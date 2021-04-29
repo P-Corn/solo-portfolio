@@ -161,6 +161,8 @@
     &__subtitle {
         margin-bottom: 6rem;
         font-size: 1.4rem;
+        // color: $blue;
+        font-weight: 300;
         @include gt-xs {
             font-size: 1.6rem;
         }
