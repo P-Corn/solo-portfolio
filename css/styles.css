@@ -401,7 +401,7 @@ a {
   flex-direction: column;
   flex: 40%;
   height: 19rem;
-  padding: 0 1rem; }
+  padding: 0 1.2rem; }
   @media screen and (min-width: 960px) {
     .card {
       flex: 20%;
