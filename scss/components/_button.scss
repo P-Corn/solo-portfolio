@@ -5,6 +5,7 @@
     color: white;
     font-weight: 300;
     transition: all 0.5s;
+    cursor: pointer;
     @include gt-xs {
         font-size: 1.8rem;
     }
@@ -27,4 +28,15 @@
 
 .btn--pink:hover {
     background-color: $pink;
+}
+
+.btn--dark {
+    @extend .btn;
+    border: .2rem solid $pink;
+    color: $darkbtn;
+}
+
+.btn--dark:hover {
+    background-color: $pink;
+    color: white;
 }

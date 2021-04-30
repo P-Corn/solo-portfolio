@@ -66,6 +66,11 @@
         background-color: $blue;
         border-radius: 50rem;
         padding: 1.5rem;
+        @include gt-xs {
+            padding: 2rem;
+            width: 5.5rem;
+            height: 5.5rem;
+        }
 
         img {
             height: 100%;
@@ -135,10 +140,6 @@
         }
     }
 
-    .btn-container {
-        padding: 1rem 0;
-    }
-
     &__content {
         // padding: 0 1rem;
         color: $sectionbg;
@@ -168,7 +169,9 @@
         }
     }
 
-    
+    &__btn {
+        padding: 1rem 0;
+    }
 }
 
 #contact-section {

@@ -119,6 +119,24 @@
                 <div>
                     <h2 class="section__title">Projects</h2>
                 </div>
+                <div class="modal-bg">
+                    <div class="modal">
+                        <div class="modal__container">
+                            <div class="modal__content">
+                                <h2>This is a modal</h2>
+                                <h4>More modal text</h4>
+                            </div>
+                            <div class="modal__actions">
+                                <div class="modal__visit-btn">
+                                    <a class="btn--dark">VISIT WEBSITE</a>
+                                </div>
+                                <span class="modal__close-btn">
+                                    <img src="src/close.svg" alt="">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <hr class="section__hr">
                 <div class="project__row">
                     <div class="project-card">
@@ -133,7 +151,7 @@
                                 <p class="project-card__subtitle">React/Node/SQL</p>
                             </div>
                             <div class="project-card__btn">
-                                <a href="#skills-section" class="btn--pink">LEARN MORE</a>
+                                <a class="btn--pink modal-btn">LEARN MORE</a>
                             </div>
                         </div>
                     </div>
@@ -146,10 +164,10 @@
                                 <h3 class="project-card__title">Spotifind</h3>
                             </div>
                             <div>
-                                <p class="project-card__subtitle">React/Node/SQL</p>
+                                <p class="project-card__subtitle">React/Spotify API</p>
                             </div>
                             <div class="project-card__btn">
-                                <a href="#skills-section" class="btn--pink">LEARN MORE</a>
+                                <a class="btn--pink modal-btn">LEARN MORE</a>
                             </div>
                         </div>
                     </div>
@@ -169,12 +187,13 @@
                         <input type="email" id="lname" name="lname" placeholder="Your email"><br>
                         <textarea placeholder="Your message" type="text" id="message"></textarea>
                         <div class="btn-container">
-                            <a href="#skills-section" class="btn--blue">SUBMIT</a>
+                            <a class="btn--blue">SUBMIT</a>
                         </div>
                     </form>
                 </div>
             </div>
         </section>
     </main>
+    <script src="app.js"></script>
 </body>
 </html>
