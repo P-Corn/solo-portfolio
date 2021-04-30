@@ -304,6 +304,9 @@ template {
 [hidden] {
   display: none; }
 
+* {
+  box-sizing: border-box; }
+
 html {
   font-size: 62.5%; }
 
@@ -487,7 +490,7 @@ a {
       .project-card__title {
         font-size: 3rem; } }
   .project-card__subtitle {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
     font-size: 1.4rem;
     font-weight: 300; }
     @media screen and (min-width: 600px) {
@@ -531,8 +534,7 @@ a {
   .contact form textarea {
     min-height: 15rem; }
   .contact form .btn-container {
-    text-align: right;
-    padding: 1rem 0; }
+    text-align: right; }
 
 .btn, .btn--blue, .btn--pink, .btn--dark {
   padding: 1rem 2.4rem;
@@ -585,10 +587,8 @@ a {
 .modal {
   background-color: white;
   width: 100%;
-  height: 100%; }
+  height: 100vh; }
   .modal__container {
-    box-sizing: border-box;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -604,3 +604,9 @@ a {
 .show-modal {
   visibility: visible;
   opacity: 1; }
+
+.carousel__slide {
+  width: 100%;
+  height: auto; }
+  .carousel__slide img {
+    max-width: 100%; }
