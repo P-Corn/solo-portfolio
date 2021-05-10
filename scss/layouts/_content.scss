@@ -16,17 +16,14 @@
     }
 
     &__col {
-        padding: 3rem;
+        padding: 3.5rem;
         margin: 2rem;
         background-color: $dark;
         border-radius: 100rem;
-        @include gt-sm {
-            padding: 3.5rem;
-        }
 
         img {
-            height: 6rem;
-            width: 6rem;
+            height: 6.5rem;
+            width: 6.5rem;
             @include gt-md {
                 height: 7rem;
                 width: 7rem;
