@@ -385,9 +385,12 @@ a {
     flex-wrap: wrap; }
   .skills__col {
     padding: 3.5rem;
-    margin: 2rem;
     background-color: #252934;
-    border-radius: 100rem; }
+    border-radius: 100rem;
+    margin: 2rem; }
+    @media screen and (max-width: 389px) {
+      .skills__col {
+        margin: 1.25rem; } }
     .skills__col img {
       height: 6.5rem;
       width: 6.5rem; }

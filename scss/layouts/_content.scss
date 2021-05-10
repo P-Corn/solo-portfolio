@@ -17,9 +17,13 @@
 
     &__col {
         padding: 3.5rem;
-        margin: 2rem;
         background-color: $dark;
         border-radius: 100rem;
+        margin: 2rem;
+
+        @include xxs {
+            margin: 1.25rem;
+        }
 
         img {
             height: 6.5rem;
