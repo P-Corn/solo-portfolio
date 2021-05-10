@@ -531,7 +531,8 @@ a {
   .contact form textarea {
     min-height: 15rem; }
   .contact form .btn-container {
-    text-align: right; }
+    text-align: right;
+    padding: 1rem 0; }
 
 .btn, .btn--blue, .btn--pink, .btn--dark {
   padding: 1rem 2.4rem;
