@@ -3,7 +3,7 @@
 }
 
 .skills {
-    max-width: 60rem;
+    max-width: 100rem;
 
     .section__hr {
         margin-bottom: 5rem;
@@ -16,17 +16,21 @@
     }
 
     &__col {
-        padding: 2.5rem;
-        margin: 1rem;
+        padding: 3rem;
+        margin: 2rem;
         background-color: $dark;
         border-radius: 100rem;
         @include gt-sm {
-            margin: 1.7rem
+            padding: 3.5rem;
         }
 
         img {
             height: 6rem;
             width: 6rem;
+            @include gt-md {
+                height: 7rem;
+                width: 7rem;
+            }
         }
     }
 }

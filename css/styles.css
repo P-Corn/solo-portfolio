@@ -376,7 +376,7 @@ a {
   background-color: #f5f5f5; }
 
 .skills {
-  max-width: 60rem; }
+  max-width: 100rem; }
   .skills .section__hr {
     margin-bottom: 5rem; }
   .skills__row {
@@ -384,16 +384,20 @@ a {
     justify-content: center;
     flex-wrap: wrap; }
   .skills__col {
-    padding: 2.5rem;
-    margin: 1rem;
+    padding: 3rem;
+    margin: 2rem;
     background-color: #252934;
     border-radius: 100rem; }
     @media screen and (min-width: 960px) {
       .skills__col {
-        margin: 1.7rem; } }
+        padding: 3.5rem; } }
     .skills__col img {
       height: 6rem;
       width: 6rem; }
+      @media screen and (min-width: 1280px) {
+        .skills__col img {
+          height: 7rem;
+          width: 7rem; } }
 
 @media screen and (max-width: 599px) {
   #create-section {
