@@ -28,8 +28,12 @@ p {
 }
 
 .section {
-    padding: 6rem 2rem;
+    padding: 6rem 2rem 7rem;
     @include flex-center;
+
+    @include gt-sm {
+        padding: 8rem 2rem 9rem;
+    }
 }
 
 .section__hr {
@@ -38,6 +42,9 @@ p {
     width: 8rem;
     margin: 1.5rem auto 6rem;
     background-color: $sectiontitle;
+    @include gt-sm {
+        margin-bottom: 7rem;
+    }
 }
 
 .section__title {

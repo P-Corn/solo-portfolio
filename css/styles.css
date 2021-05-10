@@ -320,16 +320,22 @@ p {
   max-width: 100rem; }
 
 .section {
-  padding: 6rem 2rem;
+  padding: 6rem 2rem 7rem;
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media screen and (min-width: 960px) {
+    .section {
+      padding: 8rem 2rem 9rem; } }
 
 .section__hr {
   border: 2px solid #444649;
   width: 8rem;
   margin: 1.5rem auto 6rem;
   background-color: #444649; }
+  @media screen and (min-width: 960px) {
+    .section__hr {
+      margin-bottom: 7rem; } }
 
 .section__title {
   text-align: center;
