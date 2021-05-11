@@ -16,12 +16,22 @@ modalCloseBtn.addEventListener('click', () => {
 
 const carouselSlide = document.querySelector('.carousel__slide');
 const carouselImages = document.querySelectorAll('.carousel__slide img');
+const modal = document.querySelector('.modal');
 
 const prevBtn = document.querySelector('.prevBtn');
 const nextBtn = document.querySelector('.nextBtn');
 
 let counter = 1;
-let size = carouselImages[1].clientWidth;
+let size = 0;
+
+const resizeImg = () => {
+    if(window.innerWidth >= 700)
+        size = 700;
+    else
+        size = window.innerWidth;
+}
+
+resizeImg();
 
 carouselSlide.style.transform = `translateX(${-size * counter}px)`;
 
