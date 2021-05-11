@@ -351,6 +351,75 @@ a {
   text-decoration: none;
   color: inherit; }
 
+.nav {
+  background: #1b242f;
+  border-bottom: 3px solid #04c2c9;
+  height: 5rem;
+  text-align: left;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .nav__icon {
+    height: 5rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 5vw;
+    cursor: pointer; }
+    @media screen and (min-width: 600px) {
+      .nav__icon {
+        visibility: hidden; } }
+    .nav__icon img {
+      width: 100%;
+      height: auto; }
+
+.link-wrap {
+  background: #333;
+  height: 0;
+  max-width: 110rem;
+  overflow: hidden;
+  position: absolute;
+  top: 5.3rem;
+  transition: height 0.3s ease-out;
+  width: 100%; }
+  @media screen and (min-width: 600px) {
+    .link-wrap {
+      background: none;
+      height: 5rem;
+      position: initial;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center; } }
+  .link-wrap .page-link {
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: white;
+    padding: 1.2rem 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    transition: .5s color;
+    display: block; }
+    @media screen and (min-width: 600px) {
+      .link-wrap .page-link {
+        display: inline;
+        font-size: 1.6rem;
+        margin: 0 2rem;
+        padding: initial; } }
+  .link-wrap .page-link:hover {
+    color: #e31b6d; }
+  .link-wrap .page-link:first-child {
+    padding-top: 2rem; }
+    @media screen and (min-width: 600px) {
+      .link-wrap .page-link:first-child {
+        padding-top: 0; } }
+
 .header {
   height: 90vh;
   background-color: #252934;
@@ -620,6 +689,7 @@ a {
 .modal {
   background-color: white;
   overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   width: 100%;
   height: 100vh;
   display: flex;

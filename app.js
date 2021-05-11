@@ -1,5 +1,20 @@
-//MODAL
+//NAV
+const linkWrap = document.querySelector('.link-wrap');
+const navIcon = document.querySelector('.nav__icon');
+let navOpen = false;
 
+navIcon.addEventListener('click', () => {
+    if(!navOpen) {
+        linkWrap.style.height = "22rem";
+        navOpen = !navOpen;
+    } else {
+        linkWrap.style.height = "0";
+        navOpen = !navOpen;
+    }
+})
+
+
+//MODAL
 const modalOpenBtn = document.querySelector('.modal-btn');
 const modalBg = document.querySelector('.modal-bg');
 const modalCloseBtn = document.querySelector('.modal__close-btn');
@@ -13,11 +28,9 @@ modalCloseBtn.addEventListener('click', () => {
 })
 
 // CAROUSEL
-
 const carouselSlide = document.querySelector('.carousel__slide');
 const carouselImages = document.querySelectorAll('.carousel__slide img');
 const modal = document.querySelector('.modal');
-
 const prevBtn = document.querySelector('.prevBtn');
 const nextBtn = document.querySelector('.nextBtn');
 

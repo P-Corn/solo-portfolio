@@ -1,0 +1,78 @@
+.nav {
+    background: $darkbtn;
+    border-bottom: 3px solid $blue;
+    height: 5rem;
+    text-align: left;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__icon {
+        height: 5rem;
+        width: 4rem;
+        @include flex-center;
+        position: absolute;
+        right: 5vw;
+        cursor: pointer;
+        @include gt-xs {
+            visibility: hidden;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.link-wrap {
+    background: #333;
+    height: 0;
+    max-width: 110rem;
+    overflow: hidden;
+    position: absolute;
+    top: 5.3rem;
+    transition: height 0.3s ease-out;
+    width: 100%;
+    @include gt-xs {
+        background: none;
+        height: 5rem;
+        position: initial;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .page-link {
+        cursor: pointer;
+        font-size: 1.6rem;
+        color: white;
+        padding: 1.2rem 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        transition: .5s color;
+        display: block;
+        @include gt-xs {
+            display: inline;
+            font-size: 1.6rem;
+            margin: 0 2rem;
+            padding: initial;
+        }
+    }
+
+    .page-link:hover {
+        color: $pink;
+    }
+
+    .page-link:first-child {
+        padding-top: 2rem;
+        @include gt-xs {
+            padding-top: 0;
+        }
+    }
+}
