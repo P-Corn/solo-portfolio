@@ -9,6 +9,10 @@
         margin-bottom: 4rem;
     }
 
+    .sliderOn {
+        top: 0%;
+    }
+
     &__row {
         display: flex;
         justify-content: center;
@@ -20,6 +24,9 @@
         background-color: $dark;
         border-radius: 100rem;
         margin: 2rem;
+        position: relative;
+        overflow: hidden;
+
 
         @include gt-md {
             padding: 3.8rem;
@@ -30,11 +37,23 @@
             margin: 1.25rem;
         }
 
+        &__slider {
+            height: 100%;
+            width: 100%;
+            background-color: $blue;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            @include flex-center;
+            color: $sectionbg;
+            transition: .2s ease-in-out;
+        }
+
         img {
-            height: 6.5rem;
+            height: 6.1rem;
             width: 6.5rem;
             @include gt-md {
-                height: 7rem;
+                height: 6.6rem;
                 width: 7rem;
             }
         }

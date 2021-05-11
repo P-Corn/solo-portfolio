@@ -1,3 +1,5 @@
+//MODAL
+
 const modalOpenBtn = document.querySelector('.modal-btn');
 const modalBg = document.querySelector('.modal-bg');
 const modalCloseBtn = document.querySelector('.modal__close-btn');
@@ -9,6 +11,8 @@ modalOpenBtn.addEventListener('click', () => {
 modalCloseBtn.addEventListener('click', () => {
     modalBg.classList.remove('show-modal');
 })
+
+// CAROUSEL
 
 const carouselSlide = document.querySelector('.carousel__slide');
 const carouselImages = document.querySelectorAll('.carousel__slide img');
@@ -54,4 +58,21 @@ carouselSlide.addEventListener('transitionend', () => {
         counter = carouselImages.length - counter;
         carouselSlide.style.transform = `translateX(${-size * counter}px)`;
     }
+})
+
+//SKILLS SLIDER
+
+const skillItems = document.querySelectorAll('.skills__col');
+const skillSliders = document.querySelectorAll('.skills__col__slider');
+
+skillItems.forEach((skill, index) => {
+    skill.addEventListener('mouseover', () => {
+        skillSliders[index].style.top = '0';
+        console.log(skillSliders[index])
+    })
+
+    skill.addEventListener('mouseout', () => {
+        skillSliders[index].style.top = '100%';
+        console.log(skillSliders[index])
+    })
 })
