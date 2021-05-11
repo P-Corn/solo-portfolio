@@ -1,0 +1,45 @@
+footer {
+    background: $darkbtn;
+    height: 20rem;
+    width: 100%;
+
+    .footer-container {
+        height: 100%;
+        position: relative;
+        @include flex-center;
+
+        .back-to-top {
+            position: absolute;
+            top: -2.7rem;
+            background: $pink;
+            padding: 1rem;
+            cursor: pointer;
+
+            img {
+                height: 3rem;
+            }
+        }
+
+        .footer-links {
+            display: flex;
+            padding-top: 2.5rem;
+        }
+
+        .social-link {
+            background: $social-bg;
+            padding: 2.2rem;
+            margin: 0 2.5rem;
+            border-radius: 100rem;
+            transition: .3s;
+            cursor: pointer;
+            
+            svg {
+                fill: white;
+            }
+        }
+
+        .social-link:hover {
+            background: $blue;
+        }
+    }
+}

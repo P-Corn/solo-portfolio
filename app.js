@@ -49,7 +49,6 @@ resizeImg();
 carouselSlide.style.transform = `translateX(${-size * counter}px)`;
 
 //Button listeners
-
 window.addEventListener('resize', () => {
     size = carouselImages[1].clientWidth;
     carouselSlide.style.transform = `translateX(${-size * counter}px)`;
@@ -84,7 +83,6 @@ carouselSlide.addEventListener('transitionend', () => {
 })
 
 //SKILLS SLIDER
-
 const skillItems = document.querySelectorAll('.skills__col');
 const skillSliders = document.querySelectorAll('.skills__col__slider');
 
@@ -99,3 +97,22 @@ skillItems.forEach((skill, index) => {
         console.log(skillSliders[index])
     })
 })
+
+//ANIMATIONS
+const projectCards = document.querySelectorAll('.project-card');
+
+const options = {
+    root: null,
+};
+
+const observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+        if(entry.isIntersecting === true) {
+            let target = entry.target;
+            target.classList.remove('project-card-hidden');
+            console.log(target)
+        }
+    })
+}, options)
+
+projectCards.forEach(card => observer.observe(card));

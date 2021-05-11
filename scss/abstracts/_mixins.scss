@@ -4,3 +4,8 @@
     justify-content: center;
     align-items: center;
 }
+
+.project-card-hidden {
+    transform: translateY(20rem);
+    opacity: 0;
+}
