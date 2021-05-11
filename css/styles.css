@@ -679,7 +679,8 @@ a {
     max-height: 50rem;
     display: flex; }
     .carousel__slide img {
-      width: 100%; }
+      width: 100%;
+      height: auto; }
   .carousel .prevBtn,
   .carousel .nextBtn {
     bottom: 0%;
