@@ -530,9 +530,8 @@ footer {
           height: 6.4rem;
           width: 6.8rem; } }
 
-@media screen and (max-width: 599px) {
-  #create-section {
-    padding-bottom: 4rem; } }
+#create-section {
+  padding-bottom: 4rem; }
 
 .create__row {
   display: flex;
@@ -546,7 +545,7 @@ footer {
   flex-direction: column;
   flex: 40%;
   height: 19rem;
-  padding: 0 1.2rem; }
+  padding: 1.2rem; }
   @media screen and (min-width: 960px) {
     .card {
       flex: 20%;
