@@ -100,19 +100,26 @@ skillItems.forEach((skill, index) => {
 
 //ANIMATIONS
 const projectCards = document.querySelectorAll('.project-card');
+const strengthsCards = document.querySelectorAll('.card');
 
 const options = {
     root: null,
+    rootMargin: '-200px'
 };
 
 const observer = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
         if(entry.isIntersecting === true) {
-            let target = entry.target;
-            target.classList.remove('project-card-hidden');
-            console.log(target)
+            console.log(entry.target.classList.value)
+            if(entry.target.classList.value === 'project-card project-card-hidden') {
+                entry.target.classList.remove('project-card-hidden');
+            }
+            if(entry.target.classList.value === 'card strengths-card-hidden') {
+                entry.target.classList.remove('strengths-card-hidden');
+            }
         }
     })
 }, options)
 
 projectCards.forEach(card => observer.observe(card));
+strengthsCards.forEach(card => observer.observe(card));
