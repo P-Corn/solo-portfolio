@@ -163,11 +163,11 @@ const sectionObserver = new IntersectionObserver(function(entries, observer) {
     })
 }, {
     root: null,
-    rootMargin: '-450px',
+    rootMargin: '-400px 0px',
 })
 
-sectionObserver.observe(projectsSection);
 sectionObserver.observe(headerSection);
+sectionObserver.observe(projectsSection);
 sectionObserver.observe(strengthsSection);
 sectionObserver.observe(skillsSection);
 sectionObserver.observe(contactSection);
