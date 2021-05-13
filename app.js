@@ -135,32 +135,42 @@ const sectionObserver = new IntersectionObserver(function(entries, observer) {
         if(entry.target.id === 'header') {
             if(entry.isIntersecting) {
                 Array.from(pageLinks, link => link.style.color = 'white')
-                pageLinks[0].style.color = '#e31b6d'; 
+                pageLinks[0].style.color = '#e31b6d';
+                return;
             }
+            pageLinks[0].style.color = 'white'
         }
         if(entry.target.id === 'projects-section') {
             if(entry.isIntersecting) {
                 Array.from(pageLinks, link => link.style.color = 'white')
                 pageLinks[1].style.color = '#e31b6d';
+                return;
             }
+            pageLinks[1].style.color = 'white'
         }
         if(entry.target.id === 'strengths-section') {
             if(entry.isIntersecting) {
                 Array.from(pageLinks, link => link.style.color = 'white')
                 pageLinks[2].style.color = '#e31b6d';
+                return;
             }
+            pageLinks[2].style.color = 'white'
         }
         if(entry.target.id === 'skills-section') {
             if(entry.isIntersecting) {
                 Array.from(pageLinks, link => link.style.color = 'white')
                 pageLinks[3].style.color = '#e31b6d';
+                return;
             }
+            pageLinks[3].style.color = 'white'
         }
         if(entry.target.id === 'contact-section') {
             if(entry.isIntersecting) {
                 Array.from(pageLinks, link => link.style.color = 'white')
                 pageLinks[4].style.color = '#e31b6d';
+                return;
             }
+            pageLinks[4].style.color = 'white'
         }
     })
 }, {
