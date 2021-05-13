@@ -175,7 +175,7 @@ const sectionObserver = new IntersectionObserver(function(entries, observer) {
     })
 }, {
     root: null,
-    rootMargin: '-400px 0px',
+    rootMargin: '-300px 0px',
 })
 
 sectionObserver.observe(headerSection);
