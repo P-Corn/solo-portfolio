@@ -114,7 +114,7 @@ const handleAnimation = () => {
                 skillSliders[index].style.top = '100%';
             }, 850)
         }, time)
-        time += 40;
+        time += 70;
     })
 
     // let time = 0;
