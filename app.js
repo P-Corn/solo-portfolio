@@ -127,6 +127,8 @@ const handleAnimation = () => {
     shown = true;
 }
 
+//Set the Home nav link as the default when the page is loaded
+pageLinks[0].style.color = '#e31b6d';
 //Observer for the nav link colors changing when reaching a section
 const sectionObserver = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
