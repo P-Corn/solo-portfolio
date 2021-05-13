@@ -99,6 +99,12 @@ skillItems.forEach((skill, index) => {
 //ANIMATIONS
 const projectCards = document.querySelectorAll('.project-card');
 const strengthCards = document.querySelectorAll('.strengths-card-hidden');
+const headerSection = document.querySelector('#header');
+const projectsSection = document.querySelector('#projects-section');
+const strengthsSection = document.querySelector('#strengths-section');
+const skillsSection = document.querySelector('#skills-section');
+const contactSection = document.querySelector('#contact-section');
+const pageLinks = document.querySelectorAll('.page-link');
 
 const options = {
     root: null,
@@ -113,7 +119,7 @@ const handleAnimation = () => {
                 skillSliders[index].style.top = '0';
                 setTimeout(() => {
                     skillSliders[index].style.top = '100%';
-                }, 1250)
+                }, 1300)
             }, time)
             time += 70;
         })
@@ -121,8 +127,55 @@ const handleAnimation = () => {
     shown = true;
 }
 
+//Observer for the nav link colors changing when reaching a section
+const sectionObserver = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+        if(entry.target.id === 'header') {
+            if(entry.isIntersecting) {
+                Array.from(pageLinks, link => link.style.color = 'white')
+                pageLinks[0].style.color = '#e31b6d'; 
+            }
+        }
+        if(entry.target.id === 'projects-section') {
+            if(entry.isIntersecting) {
+                Array.from(pageLinks, link => link.style.color = 'white')
+                pageLinks[1].style.color = '#e31b6d';
+            }
+        }
+        if(entry.target.id === 'strengths-section') {
+            if(entry.isIntersecting) {
+                Array.from(pageLinks, link => link.style.color = 'white')
+                pageLinks[2].style.color = '#e31b6d';
+            }
+        }
+        if(entry.target.id === 'skills-section') {
+            if(entry.isIntersecting) {
+                Array.from(pageLinks, link => link.style.color = 'white')
+                pageLinks[3].style.color = '#e31b6d';
+            }
+        }
+        if(entry.target.id === 'contact-section') {
+            if(entry.isIntersecting) {
+                Array.from(pageLinks, link => link.style.color = 'white')
+                pageLinks[4].style.color = '#e31b6d';
+            }
+        }
+    })
+}, {
+    root: null,
+    rootMargin: '-450px',
+})
+
+sectionObserver.observe(projectsSection);
+sectionObserver.observe(headerSection);
+sectionObserver.observe(strengthsSection);
+sectionObserver.observe(skillsSection);
+sectionObserver.observe(contactSection);
+
+//Observer for animations in sections
 const observer = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
+        //Section content animations
         if(entry.isIntersecting === true) {
             if(entry.target.classList.value === 'project-card project-card-hidden') {
                 entry.target.classList.remove('project-card-hidden');
