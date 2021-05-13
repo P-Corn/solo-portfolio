@@ -107,30 +107,18 @@ const options = {
 
 const handleAnimation = () => {
     let time = 0;
-    skillItems.forEach((card, index) => {
-        setTimeout(() => {
-            skillSliders[index].style.top = '0';
+    if(!shown) {
+        skillItems.forEach((card, index) => {
             setTimeout(() => {
-                skillSliders[index].style.top = '100%';
-            }, 1250)
-        }, time)
-        time += 70;
-    })
-
-    // let time = 0;
-    // let count = 0;
-    // console.log(
-    //     'here'
-    // )
-    // while(count <= skillCardsArray.length) {
-    //     setTimeout(() => {
-    //         skillSliders[count].style.top = '0';
-    //         setTimeout(() => {
-    //             skillSliders[count].style.top = '100%';
-    //         }, 1000)
-    //     }, time)
-    //     count++;
-    // }
+                skillSliders[index].style.top = '0';
+                setTimeout(() => {
+                    skillSliders[index].style.top = '100%';
+                }, 1250)
+            }, time)
+            time += 70;
+        })
+    }
+    shown = true;
 }
 
 const observer = new IntersectionObserver(function(entries, observer) {
@@ -149,6 +137,7 @@ const observer = new IntersectionObserver(function(entries, observer) {
     })
 }, options)
 
+let shown = false;
 projectCards.forEach(card => observer.observe(card));
 strengthCards.forEach(card => observer.observe(card));
 observer.observe(skillItems[skillItems.length - 1]);
