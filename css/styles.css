@@ -528,7 +528,7 @@ footer {
 #create-section {
   padding-bottom: 4rem; }
 
-.create__row {
+.strengths__row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap; }
@@ -539,9 +539,9 @@ footer {
   align-items: center;
   flex-direction: column;
   flex: 40%;
-  transition: .4s all;
+  transition: .5s all;
   height: 19rem;
-  padding: 1.2rem; }
+  padding: 1.2rem 1.5rem; }
   @media screen and (min-width: 960px) {
     .card {
       flex: 20%;

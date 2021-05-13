@@ -89,43 +89,66 @@ const skillSliders = document.querySelectorAll('.skills__col__slider');
 skillItems.forEach((skill, index) => {
     skill.addEventListener('mouseover', () => {
         skillSliders[index].style.top = '0';
-        console.log(skillSliders[index])
     })
 
     skill.addEventListener('mouseout', () => {
         skillSliders[index].style.top = '100%';
-        console.log(skillSliders[index])
     })
 })
 
 //ANIMATIONS
 const projectCards = document.querySelectorAll('.project-card');
-const strengthsCards = document.querySelectorAll('.strengths-card-hidden');
+const strengthCards = document.querySelectorAll('.strengths-card-hidden');
 
 const options = {
     root: null,
-    rootMargin: '-200px'
+    rootMargin: '-150px'
 };
+
+const handleAnimation = () => {
+    let time = 0;
+    skillItems.forEach((card, index) => {
+        setTimeout(() => {
+            skillSliders[index].style.top = '0';
+            setTimeout(() => {
+                skillSliders[index].style.top = '100%';
+            }, 850)
+        }, time)
+        time += 40;
+    })
+
+    // let time = 0;
+    // let count = 0;
+    // console.log(
+    //     'here'
+    // )
+    // while(count <= skillCardsArray.length) {
+    //     setTimeout(() => {
+    //         skillSliders[count].style.top = '0';
+    //         setTimeout(() => {
+    //             skillSliders[count].style.top = '100%';
+    //         }, 1000)
+    //     }, time)
+    //     count++;
+    // }
+}
 
 const observer = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
         if(entry.isIntersecting === true) {
-            console.log(entry.target.classList.value)
             if(entry.target.classList.value === 'project-card project-card-hidden') {
                 entry.target.classList.remove('project-card-hidden');
             }
             if(entry.target.classList.value === 'card strengths-card-hidden') {
-                let index = 0;
-                for(let card of strengthsCards) {
-                    setTimeout(() => {
-                        card.classList.remove('strengths-card-hidden');
-                        console.log(card)
-                    }, 10)
-                }
+                entry.target.classList.remove('strengths-card-hidden');
+            }
+            if(entry.target.classList.value === 'skills__col') {
+                handleAnimation();
             }
         }
     })
 }, options)
 
 projectCards.forEach(card => observer.observe(card));
-strengthsCards.forEach(card => observer.observe(card));
+strengthCards.forEach(card => observer.observe(card));
+observer.observe(skillItems[skillItems.length - 1]);
