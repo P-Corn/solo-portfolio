@@ -112,7 +112,7 @@ const handleAnimation = () => {
             skillSliders[index].style.top = '0';
             setTimeout(() => {
                 skillSliders[index].style.top = '100%';
-            }, 1000)
+            }, 1250)
         }, time)
         time += 70;
     })
