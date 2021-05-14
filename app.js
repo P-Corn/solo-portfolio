@@ -263,7 +263,7 @@ window.onload = () => {
         // generate 5 digit number for contact_number variable
         this.contact_number.value = Math.random() * 100000 | 0;
         // IDs
-        emailjs.sendForm('portfolio_site', 'contact_form', this)
+        emailjs.sendForm('portfolio_site', 'portfolio_site', this)
             .then(() => {
                 submitMessage.textContent = 'Message sent successfully';
                 submitMessage.classList.add('success');
