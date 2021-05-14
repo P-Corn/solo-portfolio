@@ -1,12 +1,12 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//     anchor.addEventListener('click', function (e) {
+//         e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+//         document.querySelector(this.getAttribute('href')).scrollIntoView({
+//             behavior: 'smooth'
+//         });
+//     });
+// });
 
 
 //NAV
@@ -186,7 +186,7 @@ const sectionObserver = new IntersectionObserver(function(entries, observer) {
     })
 }, {
     root: null,
-    rootMargin: '-300px 0px',
+    rootMargin: `${window.innerHeight < 850 ? '-325px 0px -325px 0px' : '-400px 0px -450px 0px'}`,
 })
 
 sectionObserver.observe(headerSection);
@@ -217,3 +217,40 @@ let shown = false;
 projectCards.forEach(card => observer.observe(card));
 strengthCards.forEach(card => observer.observe(card));
 observer.observe(skillItems[skillItems.length - 1]);
+
+
+// Vanilla JavaScript Scroll to Anchor
+(function() {
+	scrollTo(headerSection);
+    scrollTo(headerSection);
+})();
+
+function scrollTo() {
+	const links = document.querySelectorAll('.scroll');
+	links.forEach(each => (each.onclick = scrollAnchors));
+}
+
+function scrollAnchors(e, respond = null) {
+	const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
+	e.preventDefault();
+	var targetID = (respond) ? respond.getAttribute('href') : this.getAttribute('href');
+	const targetAnchor = document.querySelector(targetID);
+	if (!targetAnchor) return;
+	const originalTop = distanceToTop(targetAnchor);
+	window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' });
+	const checkIfDone = setInterval(function() {
+		const atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
+		if (distanceToTop(targetAnchor) === 0 || atBottom) {
+			targetAnchor.tabIndex = '-1';
+			targetAnchor.focus();
+			window.history.pushState('', '', targetID);
+			clearInterval(checkIfDone);
+		}
+	}, 100);
+}
+
+//CONTACT FORM
+
+(function() {
+    email.js.init()
+})
