@@ -216,8 +216,10 @@ const observer = new IntersectionObserver(function(entries, observer) {
 let shown = false;
 projectCards.forEach(card => observer.observe(card));
 strengthCards.forEach(card => observer.observe(card));
-observer.observe(skillItems[skillItems.length - 1]);
-
+if(window.innerWidth < 716)
+    observer.observe(skillItems[skillItems.length - 3]);
+else
+    observer.observe(skillItems[skillItems.length - 1]);
 
 // Vanilla JavaScript Scroll to Anchor
 (function() {

@@ -65,7 +65,7 @@
     }
 }
 
-#create-section {
+#strengths-section {
     padding-bottom: 4rem;
 }
 
@@ -135,7 +135,7 @@
 #projects-section {
     background-color: $sectionbg;
     @include lt-sm {
-        padding-bottom: 4rem;
+        padding-bottom: 5rem;
     }
 }
 
