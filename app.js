@@ -132,7 +132,7 @@ const handleAnimation = () => {
                     skillSliders[index].style.top = '100%';
                 }, 2000)
             }, time)
-            time += 70;
+            time += 90;
         })
     }
     shown = true;
