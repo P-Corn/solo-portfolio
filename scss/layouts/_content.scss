@@ -253,6 +253,13 @@
             min-height: 15rem;
         }
 
+        .submit-message {
+            transition: all 0.4s;
+            color: white;
+            font-size: 1.4rem;
+            @include flex-center;
+        }
+
         .btn-container {
             text-align: right;
             padding: 1rem 0;

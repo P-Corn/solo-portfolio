@@ -311,6 +311,18 @@ template {
 .strengths-card-hidden {
   opacity: 0; }
 
+.success {
+  background-color: green;
+  height: 2rem;
+  padding: .5rem 1rem;
+  margin-bottom: 2rem; }
+
+.fail {
+  background-color: red;
+  padding: .5rem 1rem;
+  margin-bottom: 2rem;
+  height: 2rem; }
+
 html {
   font-size: 62.5%; }
 
@@ -667,6 +679,13 @@ footer {
       outline: none; }
   .contact form textarea {
     min-height: 15rem; }
+  .contact form .submit-message {
+    transition: all 0.4s;
+    color: white;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   .contact form .btn-container {
     text-align: right;
     padding: 1rem 0; }

@@ -227,12 +227,14 @@
                 </div>
                 <hr class="section__hr">
                 <div class="contact__form">
-                    <form action="submit" class="form">
-                        <input type="text" id="fname" name="fname" placeholder="Your name"><br>
-                        <input type="email" id="lname" name="lname" placeholder="Your email"><br>
-                        <textarea placeholder="Your message" type="text" id="message"></textarea>
+                    <form action="submit" class="form" id="contact-form">
+                        <input type="hidden" name="contact_number">
+                        <input required type="text" id="fname" name="user_name" placeholder="Your name"><br>
+                        <input required type="email" id="lname" name="email_address" placeholder="Your email"><br>
+                        <textarea placeholder="Your message" type="text" id="message" name="message"></textarea>
+                        <div class="submit-message"></div>
                         <div class="btn-container">
-                            <a class="btn--blue">SUBMIT</a>
+                            <a onclick="document.getElementById('contact-form').requestSubmit();" class="btn--blue">SUBMIT</a>
                         </div>
                     </form>
                 </div>
@@ -258,7 +260,7 @@
             </div>
         </footer>
     </main>
-    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
