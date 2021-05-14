@@ -128,10 +128,11 @@
     }
 
     &__subtitle {
-        font-size: 1.4rem;
+        font-size: 1.35rem;
         color: $body;
         margin: 0;
         font-weight: 300;
+        line-height: 1.8rem;
         @include gt-xs {
             font-size: 1.6rem;
         }
