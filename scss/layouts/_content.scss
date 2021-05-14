@@ -1,5 +1,9 @@
 #skills-section {
     background-color: $sectionbg;
+    padding-bottom: 5rem;
+    @include gt-sm {
+        padding-bottom: 7rem;
+    }
 }
 
 .skills {
@@ -66,7 +70,10 @@
 }
 
 #strengths-section {
-    padding-bottom: 4rem;
+    padding-bottom: 3.8rem;
+    @include gt-sm {
+        padding-bottom: 8rem;
+    }
 }
 
 .strengths {
@@ -135,7 +142,7 @@
 #projects-section {
     background-color: $sectionbg;
     @include lt-sm {
-        padding-bottom: 5rem;
+        padding-bottom: 4rem;
     }
 }
 
