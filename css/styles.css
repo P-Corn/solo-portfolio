@@ -312,13 +312,13 @@ template {
   opacity: 0; }
 
 .success {
-  background-color: green;
+  background-color: #04c986;
   height: 2rem;
   padding: .5rem 1rem;
   margin-bottom: 2rem; }
 
 .fail {
-  background-color: red;
+  background-color: #ff4444;
   padding: .5rem 1rem;
   margin-bottom: 2rem;
   height: 2rem; }
@@ -542,7 +542,9 @@ footer {
       width: 6.5rem; }
 
 #strengths-section {
-  padding-bottom: 3.8rem; }
+  padding-bottom: 3.8rem;
+  padding-right: .7rem;
+  padding-left: .7rem; }
   @media screen and (min-width: 960px) {
     #strengths-section {
       padding-bottom: 8rem; } }
@@ -560,11 +562,12 @@ footer {
   flex: 40%;
   transition: .5s all;
   height: 19rem;
-  padding: 1.2rem 1.5rem; }
+  padding: 1.2rem 1.3rem; }
   @media screen and (min-width: 960px) {
     .card {
       flex: 20%;
-      height: auto; } }
+      height: auto;
+      padding: 1.2rem 1.6rem; } }
   .card__icon {
     width: 5rem;
     height: 5rem;
@@ -591,7 +594,8 @@ footer {
     color: #616161;
     margin: 0;
     font-weight: 300;
-    line-height: 1.6rem; }
+    line-height: 1.6rem;
+    max-width: 27.5rem; }
     @media screen and (min-width: 600px) {
       .card__subtitle {
         font-size: 1.6rem; } }
