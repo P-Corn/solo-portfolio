@@ -1,12 +1,11 @@
 var width, height, center;
 var points = 10;
-var smooth = false;
+var smooth = true;
 var path = new Path();
 var mousePos = view.center / 2;
 var pathHeight = mousePos.y;
 path.fillColor = '#04c2c9';
 initializePath();
-
 // Create a Tool so we can listen for events
 var toolPan = new paper.Tool()
 toolPan.activate()
