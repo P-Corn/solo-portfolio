@@ -7,6 +7,17 @@ var pathHeight = mousePos.y;
 path.fillColor = '#04c2c9';
 initializePath();
 
+// Create a Tool so we can listen for events
+var toolPan = new paper.Tool()
+toolPan.activate()
+
+// On drag, scroll the View by the difference between mousedown 
+// and mouseup
+toolPan.onMouseDrag = function (event) {
+  var delta = event.downPoint.subtract(event.point)
+  window.view.scrollBy(delta)
+}
+
 function initializePath() {
 	center = view.center;
 	width = view.size.width;
