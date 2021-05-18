@@ -1,4 +1,7 @@
 // @import 'abstracts/variables';
+#header {
+    position: relative;
+}
 
 .header {
     height: 90vh;
@@ -9,6 +12,7 @@
 
     .header__text {
         color: white;
+        z-index: 10;
         
         h1 {
             font-weight: 300;
@@ -25,5 +29,15 @@
 
     .header__btn {
         padding: 1rem 0;
+        margin-bottom: 15rem;
+        z-index: 10;
     }
+}
+
+#myCanvas {
+    height: 60rem;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
