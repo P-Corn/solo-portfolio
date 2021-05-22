@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "scss": "node-sass -w scss -o css"
+    "scss": "node-sass -w scss -o css",
+    "build": "webpack --progress --mode=production"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,12 @@
   "homepage": "https://github.com/P-Corn/solo_portfolio#readme",
   "dependencies": {
     "node-sass": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0"
   }
 }
