@@ -57,7 +57,7 @@ const sectionObserver = new IntersectionObserver(function(entries, observer) {
     })
 }, {
     root: null,
-    rootMargin: '-200px 0px -200px 0px',
+    rootMargin: `${window.innerHeight < 850 ? '-325px 0px -325px 0px' : '-400px 0px -450px 0px'}`,
 })
 
 sectionObserver.observe(headerSection);
@@ -68,7 +68,7 @@ sectionObserver.observe(contactSection);
 
 const options = {
     root: null,
-    rootMargin: '0px'
+    rootMargin: '0px 300px 0px 300px'
 }
 
 const handleAnimation = () => {

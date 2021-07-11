@@ -309,6 +309,7 @@ template {
   opacity: 0; }
 
 .strengths-card-hidden {
+  transform: translateY(10rem);
   opacity: 0; }
 
 .success {
@@ -533,12 +534,16 @@ footer {
     justify-content: center;
     flex-wrap: wrap; }
   .skills__col {
-    padding: 2rem;
+    padding: 2.5rem;
     background-color: #252934;
     border-radius: 100rem;
     margin: 2rem;
     position: relative;
     overflow: hidden; }
+    @media screen and (min-width: 1280px) {
+      .skills__col {
+        padding: 3.2rem;
+        margin: 2.2rem; } }
     @media screen and (max-width: 389px) {
       .skills__col {
         margin: 1.25rem; } }
