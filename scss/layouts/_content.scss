@@ -24,7 +24,8 @@
     }
 
     &__col {
-        padding: 3rem;
+        // padding: 3rem;
+        padding: 2rem;
         background-color: $dark;
         border-radius: 100rem;
         margin: 2rem;
@@ -59,8 +60,10 @@
         }
 
         img {
-            height: 6.1rem;
-            width: 6.5rem;
+            // height: 6.1rem;
+            // width: 6.5rem;
+            height: 5rem;
+            width: 5rem;
             // @include gt-md {
             //     height: 6.4rem;
             //     width: 6.8rem;
@@ -172,7 +175,7 @@
     max-width: 45rem;
     transition: .4s all ease-out;
     @include gt-sm {
-        margin-bottom: 0;
+        margin-bottom: 8rem;
     }
 
     &__img {

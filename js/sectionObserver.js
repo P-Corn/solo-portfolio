@@ -57,7 +57,7 @@ const sectionObserver = new IntersectionObserver(function(entries, observer) {
     })
 }, {
     root: null,
-    rootMargin: `${window.innerHeight < 850 ? '-325px 0px -325px 0px' : '-400px 0px -450px 0px'}`,
+    rootMargin: '-200px 0px -200px 0px',
 })
 
 sectionObserver.observe(headerSection);
@@ -67,7 +67,8 @@ sectionObserver.observe(skillsSection);
 sectionObserver.observe(contactSection);
 
 const options = {
-    rootMargin: '-200px'
+    root: null,
+    rootMargin: '0px'
 }
 
 const handleAnimation = () => {
@@ -112,10 +113,6 @@ if(window.innerWidth < 716)
 else
     observer.observe(skillItems[skillItems.length - 1]);
 
-// Vanilla JavaScript Scroll to Anchor
-
-
-//CONTACT FORM WITH EMAILJS
 
 
 

@@ -1,12 +1,10 @@
+const path = require('path');
 module.exports = {
     mode: 'development',
     entry: './index.js',
-    optimization: {
-        minimize: false
-    },
     output: {
-        filename: 'main.js',
-        publicPath: 'dist'
+        path: `${__dirname}/dist`,
+        filename: 'main.js'
     },
     module: {
         rules: [
@@ -21,5 +19,9 @@ module.exports = {
                 }
             }
         ]
-    }
+    },
+    devServer: {
+        contentBase: path.join(__dirname, '/'),
+        port: 9000,
+    },
 }

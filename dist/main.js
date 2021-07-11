@@ -1,328 +1,91 @@
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 777:
-/***/ (() => {
+/***/ "./index.js":
+/*!******************!*\
+  !*** ./index.js ***!
+  \******************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-var carouselSlide = document.querySelector('.carousel__slide');
-var carouselImages = document.querySelectorAll('.carousel__slide img');
-var prevBtn = document.querySelector('.prevBtn');
-var nextBtn = document.querySelector('.nextBtn');
-var counter = 1;
-var size = 0;
-
-var resizeImg = function resizeImg() {
-  if (window.innerWidth >= 700) size = 700;else size = window.innerWidth;
-};
-
-resizeImg();
-carouselSlide.style.transform = "translateX(".concat(-size * counter, "px)"); //Button listeners
-
-window.addEventListener('resize', function () {
-  size = carouselImages[1].clientWidth;
-  carouselSlide.style.transform = "translateX(".concat(-size * counter, "px)");
-});
-nextBtn.addEventListener('click', function () {
-  if (counter === carouselImages.length - 1) return;
-  carouselSlide.style.transition = 'transform 0.4s ease-in-out';
-  counter++;
-  carouselSlide.style.transform = "translateX(".concat(-size * counter, "px)");
-});
-prevBtn.addEventListener('click', function () {
-  if (counter <= 0) return;
-  carouselSlide.style.transition = 'transform 0.4s ease-in-out';
-  counter--;
-  carouselSlide.style.transform = "translateX(".concat(-size * counter, "px)");
-});
-carouselSlide.addEventListener('transitionend', function () {
-  if (carouselImages[counter].id === 'lastClone') {
-    carouselSlide.style.transition = 'none';
-    counter = carouselImages.length - 2;
-    carouselSlide.style.transform = "translateX(".concat(-size * counter, "px)");
-  }
-
-  if (carouselImages[counter].id === 'firstClone') {
-    carouselSlide.style.transition = 'none';
-    console.log(counter);
-    counter = carouselImages.length - counter;
-    carouselSlide.style.transform = "translateX(".concat(-size * counter, "px)");
-  }
-});
+eval("__webpack_require__(/*! ./js/smoothScrolling.js */ \"./js/smoothScrolling.js\");\n\n__webpack_require__(/*! ./js/contactForm.js */ \"./js/contactForm.js\");\n\n__webpack_require__(/*! ./js/carouselController.js */ \"./js/carouselController.js\");\n\n__webpack_require__(/*! ./js/modalController.js */ \"./js/modalController.js\");\n\n__webpack_require__(/*! ./js/sectionObserver.js */ \"./js/sectionObserver.js\");\n\n__webpack_require__(/*! ./js/sectionSkills.js */ \"./js/sectionSkills.js\");\n\n__webpack_require__(/*! ./js/navController.js */ \"./js/navController.js\");\n\n//# sourceURL=webpack://solo_portfolio/./index.js?");
 
 /***/ }),
 
-/***/ 641:
+/***/ "./js/carouselController.js":
+/*!**********************************!*\
+  !*** ./js/carouselController.js ***!
+  \**********************************/
 /***/ (() => {
 
-var submitMessage = document.querySelector('.submit-message');
-
-(function () {
-  emailjs.init('user_WDObBAlbPYJe8ZiZ6VQ9w');
-})();
-
-window.onload = function () {
-  document.getElementById('contact-form').addEventListener('submit', function (e) {
-    e.preventDefault(); // generate 5 digit number for contact_number variable
-
-    this.contact_number.value = Math.random() * 100000 | 0; // IDs
-
-    emailjs.sendForm('portfolio_site', 'portfolio_site', this).then(function () {
-      submitMessage.textContent = 'Message sent successfully';
-      submitMessage.classList.add('success');
-      document.getElementById('contact-form').reset();
-      setTimeout(function () {
-        submitMessage.textContent = '';
-        submitMessage.classList.remove('success');
-      }, 4000);
-    }, function (error) {
-      submitMessage.textContent = 'Message failed to send';
-      submitMessage.classList.add('fail');
-      console.log('Message failed to send. Error: ' + error);
-      setTimeout(function () {
-        submitMessage.textContent = '';
-        submitMessage.classList.remove('fail');
-      }, 4000);
-    });
-  });
-};
+eval("var carouselSlide = document.querySelector('.carousel__slide');\nvar carouselImages = document.querySelectorAll('.carousel__slide img');\nvar prevBtn = document.querySelector('.prevBtn');\nvar nextBtn = document.querySelector('.nextBtn');\nvar counter = 1;\nvar size = 0;\n\nvar resizeImg = function resizeImg() {\n  if (window.innerWidth >= 700) size = 700;else size = window.innerWidth;\n};\n\nresizeImg();\ncarouselSlide.style.transform = \"translateX(\".concat(-size * counter, \"px)\"); //Button listeners\n\nwindow.addEventListener('resize', function () {\n  size = carouselImages[1].clientWidth;\n  carouselSlide.style.transform = \"translateX(\".concat(-size * counter, \"px)\");\n});\nnextBtn.addEventListener('click', function () {\n  if (counter === carouselImages.length - 1) return;\n  carouselSlide.style.transition = 'transform 0.4s ease-in-out';\n  counter++;\n  carouselSlide.style.transform = \"translateX(\".concat(-size * counter, \"px)\");\n});\nprevBtn.addEventListener('click', function () {\n  if (counter <= 0) return;\n  carouselSlide.style.transition = 'transform 0.4s ease-in-out';\n  counter--;\n  carouselSlide.style.transform = \"translateX(\".concat(-size * counter, \"px)\");\n});\ncarouselSlide.addEventListener('transitionend', function () {\n  if (carouselImages[counter].id === 'lastClone') {\n    carouselSlide.style.transition = 'none';\n    counter = carouselImages.length - 2;\n    carouselSlide.style.transform = \"translateX(\".concat(-size * counter, \"px)\");\n  }\n\n  if (carouselImages[counter].id === 'firstClone') {\n    carouselSlide.style.transition = 'none';\n    console.log(counter);\n    counter = carouselImages.length - counter;\n    carouselSlide.style.transform = \"translateX(\".concat(-size * counter, \"px)\");\n  }\n});\n\n//# sourceURL=webpack://solo_portfolio/./js/carouselController.js?");
 
 /***/ }),
 
-/***/ 833:
+/***/ "./js/contactForm.js":
+/*!***************************!*\
+  !*** ./js/contactForm.js ***!
+  \***************************/
 /***/ (() => {
 
-var modal = document.querySelector('.modal');
-var modalOpenBtn = document.querySelector('.modal-btn');
-var modalBg = document.querySelector('.modal-bg');
-var modalCloseBtn = document.querySelector('.modal__close-btn');
-modalOpenBtn.addEventListener('click', function () {
-  modalBg.classList.add('show-modal');
-});
-modalCloseBtn.addEventListener('click', function () {
-  modalBg.classList.remove('show-modal');
-});
+eval("var submitMessage = document.querySelector('.submit-message');\n\n(function () {\n  emailjs.init('user_WDObBAlbPYJe8ZiZ6VQ9w');\n})();\n\nwindow.onload = function () {\n  document.getElementById('contact-form').addEventListener('submit', function (e) {\n    e.preventDefault(); // generate 5 digit number for contact_number variable\n\n    this.contact_number.value = Math.random() * 100000 | 0; // IDs\n\n    emailjs.sendForm('portfolio_site', 'portfolio_site', this).then(function () {\n      submitMessage.textContent = 'Message sent successfully';\n      submitMessage.classList.add('success');\n      document.getElementById('contact-form').reset();\n      setTimeout(function () {\n        submitMessage.textContent = '';\n        submitMessage.classList.remove('success');\n      }, 4000);\n    }, function (error) {\n      submitMessage.textContent = 'Message failed to send';\n      submitMessage.classList.add('fail');\n      console.log('Message failed to send. Error: ' + error);\n      setTimeout(function () {\n        submitMessage.textContent = '';\n        submitMessage.classList.remove('fail');\n      }, 4000);\n    });\n  });\n};\n\n//# sourceURL=webpack://solo_portfolio/./js/contactForm.js?");
 
 /***/ }),
 
-/***/ 384:
+/***/ "./js/modalController.js":
+/*!*******************************!*\
+  !*** ./js/modalController.js ***!
+  \*******************************/
 /***/ (() => {
 
-var linkWrap = document.querySelector('.link-wrap');
-var navIcon = document.querySelector('.nav__icon');
-var navOpen = false;
-navIcon.addEventListener('click', function () {
-  if (!navOpen) {
-    linkWrap.style.height = "22rem";
-    navOpen = !navOpen;
-  } else {
-    linkWrap.style.height = "0";
-    navOpen = !navOpen;
-  }
-});
+eval("var modal = document.querySelector('.modal');\nvar modalOpenBtn = document.querySelector('.modal-btn');\nvar modalBg = document.querySelector('.modal-bg');\nvar modalCloseBtn = document.querySelector('.modal__close-btn');\nmodalOpenBtn.addEventListener('click', function () {\n  modalBg.classList.add('show-modal');\n});\nmodalCloseBtn.addEventListener('click', function () {\n  modalBg.classList.remove('show-modal');\n});\n\n//# sourceURL=webpack://solo_portfolio/./js/modalController.js?");
 
 /***/ }),
 
-/***/ 252:
+/***/ "./js/navController.js":
+/*!*****************************!*\
+  !*** ./js/navController.js ***!
+  \*****************************/
 /***/ (() => {
 
-var skillItems = document.querySelectorAll('.skills__col');
-var skillSliders = document.querySelectorAll('.skills__col__slider');
-var projectCards = document.querySelectorAll('.project-card');
-var strengthCards = document.querySelectorAll('.strengths-card-hidden');
-var headerSection = document.querySelector('#header');
-var projectsSection = document.querySelector('#projects-section');
-var strengthsSection = document.querySelector('#strengths-section');
-var skillsSection = document.querySelector('#skills-section');
-var contactSection = document.querySelector('#contact-section');
-var pageLinks = document.querySelectorAll('.page-link'); //Set the Home nav link as the default when the page is loaded
-
-pageLinks[0].style.color = '#e31b6d'; //Observer for the nav link colors changing when reaching a section
-
-var sectionObserver = new IntersectionObserver(function (entries, observer) {
-  entries.forEach(function (entry) {
-    if (entry.target.id === 'header') {
-      if (entry.isIntersecting) {
-        Array.from(pageLinks, function (link) {
-          return link.style.color = 'white';
-        });
-        pageLinks[0].style.color = '#e31b6d';
-        return;
-      }
-
-      pageLinks[0].style.color = 'white';
-    }
-
-    if (entry.target.id === 'projects-section') {
-      if (entry.isIntersecting) {
-        Array.from(pageLinks, function (link) {
-          return link.style.color = 'white';
-        });
-        pageLinks[1].style.color = '#e31b6d';
-        return;
-      }
-
-      pageLinks[1].style.color = 'white';
-    }
-
-    if (entry.target.id === 'strengths-section') {
-      if (entry.isIntersecting) {
-        Array.from(pageLinks, function (link) {
-          return link.style.color = 'white';
-        });
-        pageLinks[2].style.color = '#e31b6d';
-        return;
-      }
-
-      pageLinks[2].style.color = 'white';
-    }
-
-    if (entry.target.id === 'skills-section') {
-      if (entry.isIntersecting) {
-        Array.from(pageLinks, function (link) {
-          return link.style.color = 'white';
-        });
-        pageLinks[3].style.color = '#e31b6d';
-        return;
-      }
-
-      pageLinks[3].style.color = 'white';
-    }
-
-    if (entry.target.id === 'contact-section') {
-      if (entry.isIntersecting) {
-        Array.from(pageLinks, function (link) {
-          return link.style.color = 'white';
-        });
-        pageLinks[4].style.color = '#e31b6d';
-        return;
-      }
-
-      pageLinks[4].style.color = 'white';
-    }
-  });
-}, {
-  root: null,
-  rootMargin: "".concat(window.innerHeight < 850 ? '-325px 0px -325px 0px' : '-400px 0px -450px 0px')
-});
-sectionObserver.observe(headerSection);
-sectionObserver.observe(projectsSection);
-sectionObserver.observe(strengthsSection);
-sectionObserver.observe(skillsSection);
-sectionObserver.observe(contactSection);
-var options = {
-  rootMargin: '-200px'
-};
-
-var handleAnimation = function handleAnimation() {
-  var time = 0;
-
-  if (!shown) {
-    skillItems.forEach(function (card, index) {
-      setTimeout(function () {
-        skillSliders[index].style.top = '0';
-        setTimeout(function () {
-          skillSliders[index].style.top = '100%';
-        }, 2000);
-      }, time);
-      time += 90;
-    });
-  }
-
-  shown = true;
-}; //Observer for animations in sections
-
-
-var observer = new IntersectionObserver(function (entries, observer) {
-  entries.forEach(function (entry) {
-    //Section content animations
-    if (entry.isIntersecting === true) {
-      if (entry.target.classList.value === 'project-card project-card-hidden') {
-        entry.target.classList.remove('project-card-hidden');
-      }
-
-      if (entry.target.classList.value === 'card strengths-card-hidden') {
-        entry.target.classList.remove('strengths-card-hidden');
-      }
-
-      if (entry.target.classList.value === 'skills__col') {
-        handleAnimation();
-      }
-    }
-  });
-}, options);
-var shown = false;
-projectCards.forEach(function (card) {
-  return observer.observe(card);
-});
-strengthCards.forEach(function (card) {
-  return observer.observe(card);
-});
-if (window.innerWidth < 716) observer.observe(skillItems[skillItems.length - 3]);else observer.observe(skillItems[skillItems.length - 1]); // Vanilla JavaScript Scroll to Anchor
-//CONTACT FORM WITH EMAILJS
+eval("var linkWrap = document.querySelector('.link-wrap');\nvar navIcon = document.querySelector('.nav__icon');\nvar navOpen = false;\nnavIcon.addEventListener('click', function () {\n  if (!navOpen) {\n    linkWrap.style.height = \"22rem\";\n    navOpen = !navOpen;\n  } else {\n    linkWrap.style.height = \"0\";\n    navOpen = !navOpen;\n  }\n});\n\n//# sourceURL=webpack://solo_portfolio/./js/navController.js?");
 
 /***/ }),
 
-/***/ 883:
+/***/ "./js/sectionObserver.js":
+/*!*******************************!*\
+  !*** ./js/sectionObserver.js ***!
+  \*******************************/
 /***/ (() => {
 
-var skillItems = document.querySelectorAll('.skills__col');
-var skillSliders = document.querySelectorAll('.skills__col__slider');
-skillItems.forEach(function (skill, index) {
-  skill.addEventListener('mouseover', function () {
-    skillSliders[index].style.top = '0';
-  });
-  skill.addEventListener('mouseout', function () {
-    skillSliders[index].style.top = '100%';
-  });
-});
+eval("var skillItems = document.querySelectorAll('.skills__col');\nvar skillSliders = document.querySelectorAll('.skills__col__slider');\nvar projectCards = document.querySelectorAll('.project-card');\nvar strengthCards = document.querySelectorAll('.strengths-card-hidden');\nvar headerSection = document.querySelector('#header');\nvar projectsSection = document.querySelector('#projects-section');\nvar strengthsSection = document.querySelector('#strengths-section');\nvar skillsSection = document.querySelector('#skills-section');\nvar contactSection = document.querySelector('#contact-section');\nvar pageLinks = document.querySelectorAll('.page-link'); //Set the Home nav link as the default when the page is loaded\n\npageLinks[0].style.color = '#e31b6d'; //Observer for the nav link colors changing when reaching a section\n\nvar sectionObserver = new IntersectionObserver(function (entries, observer) {\n  entries.forEach(function (entry) {\n    if (entry.target.id === 'header') {\n      if (entry.isIntersecting) {\n        Array.from(pageLinks, function (link) {\n          return link.style.color = 'white';\n        });\n        pageLinks[0].style.color = '#e31b6d';\n        return;\n      }\n\n      pageLinks[0].style.color = 'white';\n    }\n\n    if (entry.target.id === 'projects-section') {\n      if (entry.isIntersecting) {\n        Array.from(pageLinks, function (link) {\n          return link.style.color = 'white';\n        });\n        pageLinks[1].style.color = '#e31b6d';\n        return;\n      }\n\n      pageLinks[1].style.color = 'white';\n    }\n\n    if (entry.target.id === 'strengths-section') {\n      if (entry.isIntersecting) {\n        Array.from(pageLinks, function (link) {\n          return link.style.color = 'white';\n        });\n        pageLinks[2].style.color = '#e31b6d';\n        return;\n      }\n\n      pageLinks[2].style.color = 'white';\n    }\n\n    if (entry.target.id === 'skills-section') {\n      if (entry.isIntersecting) {\n        Array.from(pageLinks, function (link) {\n          return link.style.color = 'white';\n        });\n        pageLinks[3].style.color = '#e31b6d';\n        return;\n      }\n\n      pageLinks[3].style.color = 'white';\n    }\n\n    if (entry.target.id === 'contact-section') {\n      if (entry.isIntersecting) {\n        Array.from(pageLinks, function (link) {\n          return link.style.color = 'white';\n        });\n        pageLinks[4].style.color = '#e31b6d';\n        return;\n      }\n\n      pageLinks[4].style.color = 'white';\n    }\n  });\n}, {\n  root: null,\n  rootMargin: '-200px 0px -200px 0px'\n});\nsectionObserver.observe(headerSection);\nsectionObserver.observe(projectsSection);\nsectionObserver.observe(strengthsSection);\nsectionObserver.observe(skillsSection);\nsectionObserver.observe(contactSection);\nvar options = {\n  root: null,\n  rootMargin: '0px'\n};\n\nvar handleAnimation = function handleAnimation() {\n  var time = 0;\n\n  if (!shown) {\n    skillItems.forEach(function (card, index) {\n      setTimeout(function () {\n        skillSliders[index].style.top = '0';\n        setTimeout(function () {\n          skillSliders[index].style.top = '100%';\n        }, 2000);\n      }, time);\n      time += 90;\n    });\n  }\n\n  shown = true;\n}; //Observer for animations in sections\n\n\nvar observer = new IntersectionObserver(function (entries, observer) {\n  entries.forEach(function (entry) {\n    //Section content animations\n    if (entry.isIntersecting === true) {\n      if (entry.target.classList.value === 'project-card project-card-hidden') {\n        entry.target.classList.remove('project-card-hidden');\n      }\n\n      if (entry.target.classList.value === 'card strengths-card-hidden') {\n        entry.target.classList.remove('strengths-card-hidden');\n      }\n\n      if (entry.target.classList.value === 'skills__col') {\n        handleAnimation();\n      }\n    }\n  });\n}, options);\nvar shown = false;\nprojectCards.forEach(function (card) {\n  return observer.observe(card);\n});\nstrengthCards.forEach(function (card) {\n  return observer.observe(card);\n});\nif (window.innerWidth < 716) observer.observe(skillItems[skillItems.length - 3]);else observer.observe(skillItems[skillItems.length - 1]);\n\n//# sourceURL=webpack://solo_portfolio/./js/sectionObserver.js?");
 
 /***/ }),
 
-/***/ 970:
+/***/ "./js/sectionSkills.js":
+/*!*****************************!*\
+  !*** ./js/sectionSkills.js ***!
+  \*****************************/
 /***/ (() => {
 
-var headerSection = document.querySelector('#header');
+eval("var skillItems = document.querySelectorAll('.skills__col');\nvar skillSliders = document.querySelectorAll('.skills__col__slider');\nskillItems.forEach(function (skill, index) {\n  skill.addEventListener('mouseover', function () {\n    skillSliders[index].style.top = '0';\n  });\n  skill.addEventListener('mouseout', function () {\n    skillSliders[index].style.top = '100%';\n  });\n});\n\n//# sourceURL=webpack://solo_portfolio/./js/sectionSkills.js?");
 
-(function () {
-  scrollTo(headerSection);
-  scrollTo(headerSection);
-})();
+/***/ }),
 
-function scrollTo() {
-  var links = document.querySelectorAll('.scroll');
-  links.forEach(function (each) {
-    return each.onclick = scrollAnchors;
-  });
-}
+/***/ "./js/smoothScrolling.js":
+/*!*******************************!*\
+  !*** ./js/smoothScrolling.js ***!
+  \*******************************/
+/***/ (() => {
 
-function scrollAnchors(e) {
-  var respond = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-
-  var distanceToTop = function distanceToTop(el) {
-    return Math.floor(el.getBoundingClientRect().top);
-  };
-
-  e.preventDefault();
-  var targetID = respond ? respond.getAttribute('href') : this.getAttribute('href');
-  var targetAnchor = document.querySelector(targetID);
-  if (!targetAnchor) return;
-  var originalTop = distanceToTop(targetAnchor);
-  window.scrollBy({
-    top: originalTop,
-    left: 0,
-    behavior: 'smooth'
-  });
-  var checkIfDone = setInterval(function () {
-    var atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
-
-    if (distanceToTop(targetAnchor) === 0 || atBottom) {
-      targetAnchor.tabIndex = '-1';
-      targetAnchor.focus();
-      window.history.pushState('', '', targetID);
-      clearInterval(checkIfDone);
-    }
-  }, 100);
-}
+eval("var headerSection = document.querySelector('#header');\n\n(function () {\n  scrollTo(headerSection);\n  scrollTo(headerSection);\n})();\n\nfunction scrollTo() {\n  var links = document.querySelectorAll('.scroll');\n  links.forEach(function (each) {\n    return each.onclick = scrollAnchors;\n  });\n}\n\nfunction scrollAnchors(e) {\n  var respond = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;\n\n  var distanceToTop = function distanceToTop(el) {\n    return Math.floor(el.getBoundingClientRect().top);\n  };\n\n  e.preventDefault();\n  var targetID = respond ? respond.getAttribute('href') : this.getAttribute('href');\n  var targetAnchor = document.querySelector(targetID);\n  if (!targetAnchor) return;\n  var originalTop = distanceToTop(targetAnchor);\n  window.scrollBy({\n    top: originalTop,\n    left: 0,\n    behavior: 'smooth'\n  });\n  var checkIfDone = setInterval(function () {\n    var atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;\n\n    if (distanceToTop(targetAnchor) === 0 || atBottom) {\n      targetAnchor.tabIndex = '-1';\n      targetAnchor.focus();\n      window.history.pushState('', '', targetID);\n      clearInterval(checkIfDone);\n    }\n  }, 100);\n}\n\n//# sourceURL=webpack://solo_portfolio/./js/smoothScrolling.js?");
 
 /***/ })
 
@@ -353,23 +116,11 @@ function scrollAnchors(e) {
 /******/ 	}
 /******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-(() => {
-__webpack_require__(970);
-
-__webpack_require__(641);
-
-__webpack_require__(777);
-
-__webpack_require__(833);
-
-__webpack_require__(252);
-
-__webpack_require__(883);
-
-__webpack_require__(384);
-})();
-
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = __webpack_require__("./index.js");
+/******/ 	
 /******/ })()
 ;
