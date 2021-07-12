@@ -325,12 +325,14 @@ template {
   height: 2rem; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  overflow-x: hidden; }
 
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  overflow-x: hidden; }
 
 h3,
 p {
